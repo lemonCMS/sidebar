@@ -1,1 +1,40 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<div class="flex flex-row gap-4 w-full h-dvh">
+  <div class="bg-blue-400 w-56 p-1" >
+    <div class="rounded h-full flex flex-col justify-around items-center">
+
+      <ul class="grid w-full gap-4">
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-status'] } }]" class="grid">Status</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-kiosk'] } }]" class="grid">Kiosk</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-subscriber-centre'] } }]" class="grid">Subscriber Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-transient-centre'] } }]" class="grid">Transient Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-payment-centre'] } }]" class="grid">Payment Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-ticket-centre'] } }]" class="grid">Ticket Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-license-plate-centre'] } }]" class="grid">License plate Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-visitor-centre'] } }]" class="grid">Visitor Centre</a></li>
+        <li><a [routerLink]="[{ outlets: { sidebar: ['menu-reservations'] } }]" class="grid">Reservations</a></li>
+
+      </ul>
+
+<!--      <div class="flex flex-col gap-4">-->
+<!--        <p-button icon="pi pi-check" [routerLink]="['page-1']" [label]="'kaas'" ></p-button>-->
+<!--        <p-button icon="pi pi-check" [routerLink]="['page-1']">dddssss</p-button>-->
+<!--        <p-button icon="pi pi-check" [routerLink]="['page-2']"></p-button>-->
+<!--        <p-button icon="pi pi-check" [routerLink]="[{ outlets: { sidebar: ['page-1'] } }]" [skipLocationChange]="true"></p-button>-->
+<!--        <p-button icon="pi pi-check" [routerLink]="[{ outlets: { sidebar: ['page-2'] } }]" [skipLocationChange]="true"></p-button>-->
+<!--      </div>-->
+    </div>
+  </div>
+  <div class="bg-amber-500 grow">
+    <p-inputGroup class="w-full md:w-30rem" (click)="click()" >
+      <p-inputGroupAddon>
+        <i class="pi pi-search"></i>
+      </p-inputGroupAddon>
+
+      <input type="text" pInputText placeholder="Search license plate, Card or Parker" />
+    </p-inputGroup>
+
+    <router-outlet />
+  </div>
+</div>
+<app-panel />
+

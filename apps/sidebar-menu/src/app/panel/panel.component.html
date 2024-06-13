@@ -1,0 +1,12 @@
+<p-sidebar [visible]="isOpen()"  [fullScreen]="isFullScreen()" (onHide)="hide()" [modal]="false">
+<!--  <p>-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+<!--    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
+<!--  </p>-->
+<!--  <p-button icon="pi pi-check" [routerLink]="[{outlets: { primary: 'page-1', sidebar: null, 'sidebar-right': null}}]" ></p-button>-->
+<!--  <p-button icon="pi pi-check" [routerLink]="[{outlets: {  sidebar: 'page-1'}}]" [skipLocationChange]="true"></p-button>-->
+<!--  <p-button icon="pi pi-check" [routerLink]="[{outlets: {  sidebar: 'page-2'}}]" [skipLocationChange]="true"></p-button>-->
+<!--  <p-button icon="pi pi-check" [routerLink]="[{outlets: {  'sidebar-right': 'menu-system-status'}}]" ></p-button>-->
+  <router-outlet name="sidebar" />
+
+</p-sidebar>

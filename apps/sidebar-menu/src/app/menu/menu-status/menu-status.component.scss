@@ -1,0 +1,5 @@
+.menu-status-container {
+  @apply flex flex-row gap-4;
+
+  height: calc(100dvh - 6rem);
+}

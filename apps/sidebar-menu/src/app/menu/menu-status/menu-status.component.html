@@ -1,0 +1,18 @@
+<div class="menu-status-container">
+  @if (showMenu()) {
+    <div class="w-72 bg-cyan-800">
+      <ul class="grid gap-4 ">
+        <li><a [routerLink]="['menu-system-status']">System status</a></li>
+        <li><a [routerLink]="['menu-favourites']">Favourites</a></li>
+        <li><a [routerLink]="['menu-output-button-status']">Output button status</a>
+        </li>
+        <li><a [routerLink]="['menu-section-status']">Section status</a></li>
+        <li><a [routerLink]="[ 'menu-traffic-light-status']">Traffic light status</a>
+        </li>
+      </ul>
+    </div>
+  }
+  <div class="bg-red-500 flex-grow">
+    <router-outlet (activate)="onRouteActivate($event)" (deactivate)="onRouteDeactivate($event)" />
+  </div>
+</div>
